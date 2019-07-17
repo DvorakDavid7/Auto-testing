@@ -1,0 +1,11 @@
+UNIT TEST
+
+Unit test se používá pro testování funkcionalit, které
+jsou nezávislé na ostatních funkcionalitách.
+
+TDD (test driven development)
+1) napsat test, na základě očekávání od dané funkcionality
+2) spustit test a potvrdit jeho selhání
+3) napíšeme jednoduše funkcionalitu tak, aby prošla testem
+4) do testu přidáme další detaily
+5) proces opakujeme dokud není naplněno veškeré očekávání od dané funkcionality
