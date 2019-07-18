@@ -9,6 +9,7 @@ class BlogTest(TestCase):
         b = Blog("Název", "autor")
         b.create_post("Titulek", "Obsah")
 
+        # v poli posts jsou uloženy objekty
         self.assertEqual(b.posts[0].title, "Titulek")
         self.assertEqual(b.posts[0].content, "Obsah")
 
@@ -27,8 +28,8 @@ class BlogTest(TestCase):
                 }
             ]
         }
-
         self.assertDictEqual(expected, b.json())
+
 
     def test_json_no_posts(self):
         b = Blog("Název", "autor")
@@ -37,7 +38,6 @@ class BlogTest(TestCase):
             "author": "autor",
             "posts": []
         }
-
         self.assertDictEqual(expected, b.json())
 
 

@@ -13,12 +13,15 @@ class Blog:
                                             's' if len(self.posts) != 1 else '')
 
     def create_post(self, title, content):
-        self.posts.append(Post(title, content))
+        # do pole posts přidáme objekt Post
+        a = Post(title, content)
+        self.posts.append(a)
 
 
     def json(self):
+        # v poli posts jsou objekty na které se postupně aplikuje motoda .json()
         return {
             "title": self.title,
             "author": self.author,
-            "posts": [post.json() for post in self.posts],
+            "posts": [post.json() for post in self.posts], # Post("a","b").json()
         }
